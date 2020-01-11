@@ -40,7 +40,7 @@ public class FizzBuzzTest {
 
     @Test
     public void should_say_FizzBuzz_when_number_is_the_multiple_of_3_and_5(){
-        assertEquals(FizzBuzz.fizzBuzz(15), "FizzBuzz");
+        assertEquals(FizzBuzz.fizzBuzz(120), "FizzBuzz");
     }
 
     @Test
@@ -50,17 +50,23 @@ public class FizzBuzzTest {
 
     @Test
     public void should_say_BuzzWhizz_when_number_is_the_multiple_of_5_and_7(){
-        assertEquals(FizzBuzz.fizzBuzz(35), "BuzzWhizz");
+        assertEquals(FizzBuzz.fizzBuzz(70), "BuzzWhizz");
     }
 
     @Test
     public void should_say_FizzBuzzWhizz_when_number_is_the_multiple_of_3_and_5_and_7(){
-        assertEquals(FizzBuzz.fizzBuzz(105), "FizzBuzzWhizz");
+        assertEquals(FizzBuzz.fizzBuzz(210), "FizzBuzzWhizz");
     }
 
     @Test
     public void should_say_Fizz_when_number_contains_3(){
         assertEquals(FizzBuzz.fizzBuzz(13), "Fizz");
         assertEquals(FizzBuzz.fizzBuzz(30), "Fizz");
+    }
+
+    @Test
+    public void should_ignore_rule_of_contains_3_and_multiple_of_3_when_number_contains_5(){
+        assertEquals(FizzBuzz.fizzBuzz(35), "BuzzWhizz");
+        assertEquals(FizzBuzz.fizzBuzz(15), "Buzz");
     }
 }

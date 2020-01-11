@@ -3,22 +3,23 @@ package com.thoughtworks;
 public class FizzBuzz {
 
     public static String fizzBuzz(int number){
-        if (String.valueOf(number).contains("3")){
+        boolean isContains5 = isContains(number, 5);
+        if (!isContains5 && isContains(number, 3)){
             return "Fizz";
         }
-        if (number % 3 == 0 && number % 5 ==0 && number % 7 == 0){
+        if ((!isContains5 && number % 3 == 0) && number % 5 ==0 && number % 7 == 0){
             return "FizzBuzzWhizz";
         }
-        if (number % 3 == 0 && number % 7 == 0){
+        if ((!isContains5 && number % 3 == 0) && number % 7 == 0){
             return "FizzWhizz";
         }
-        if (number % 3 == 0 && number % 5 == 0){
+        if ((!isContains5 && number % 3 == 0) && number % 5 == 0){
             return "FizzBuzz";
         }
         if (number % 5 == 0 && number % 7 == 0){
             return "BuzzWhizz";
         }
-        if (number % 3 == 0){
+        if (!isContains5 && number % 3 == 0){
             return "Fizz";
         }
         if (number % 5 == 0){
@@ -28,5 +29,9 @@ public class FizzBuzz {
             return "Whizz";
         }
         return String.valueOf(number);
+    }
+
+    private static boolean isContains(int number, int n) {
+        return String.valueOf(number).contains(String.valueOf(n));
     }
 }
