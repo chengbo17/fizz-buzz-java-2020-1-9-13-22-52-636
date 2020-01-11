@@ -47,4 +47,9 @@ public class FizzBuzzTest {
     public void should_say_FizzWhizz_when_number_is_the_multiple_of_3_and_7(){
         assertEquals(FizzBuzz.fizzBuzz(21), "FizzWhizz");
     }
+
+    @Test
+    public void should_say_BuzzWhizz_when_number_is_the_multiple_of_5_and_7(){
+        assertEquals(FizzBuzz.fizzBuzz(35), "BuzzWhizz");
+    }
 }
