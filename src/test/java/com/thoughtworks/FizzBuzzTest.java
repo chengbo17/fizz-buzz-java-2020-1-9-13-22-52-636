@@ -61,5 +61,6 @@ public class FizzBuzzTest {
     @Test
     public void should_say_Fizz_when_number_contains_3(){
         assertEquals(FizzBuzz.fizzBuzz(13), "Fizz");
+        assertEquals(FizzBuzz.fizzBuzz(30), "Fizz");
     }
 }
