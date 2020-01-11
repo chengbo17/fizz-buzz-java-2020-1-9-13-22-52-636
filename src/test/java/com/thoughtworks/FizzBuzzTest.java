@@ -31,4 +31,12 @@ public class FizzBuzzTest {
         assertEquals(FizzBuzz.fizzBuzz(5), "Buzz");
         assertEquals(FizzBuzz.fizzBuzz(10), "Buzz");
     }
+
+    @Test
+    public void should_say_Whizz_when_number_is_the_multiple_of_7(){
+        assertEquals(FizzBuzz.fizzBuzz(7), "Whizz");
+        assertEquals(FizzBuzz.fizzBuzz(14), "Whizz");
+    }
+
+
 }
