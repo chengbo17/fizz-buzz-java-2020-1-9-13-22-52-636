@@ -25,4 +25,10 @@ public class FizzBuzzTest {
         assertEquals(FizzBuzz.fizzBuzz(3), "Fizz");
         assertEquals(FizzBuzz.fizzBuzz(6), "Fizz");
     }
+
+    @Test
+    public void should_say_Buzz_when_number_is_the_multiple_of_5(){
+        assertEquals(FizzBuzz.fizzBuzz(5), "Buzz");
+        assertEquals(FizzBuzz.fizzBuzz(10), "Buzz");
+    }
 }
