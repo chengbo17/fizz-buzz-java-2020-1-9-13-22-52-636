@@ -19,4 +19,10 @@ public class FizzBuzzTest {
 
         assertEquals(word, "2");
     }
+
+    @Test
+    public void should_say_Fizz_when_number_is_the_multiple_of_3(){
+        assertEquals(FizzBuzz.fizzBuzz(3), "Fizz");
+        assertEquals(FizzBuzz.fizzBuzz(6), "Fizz");
+    }
 }
