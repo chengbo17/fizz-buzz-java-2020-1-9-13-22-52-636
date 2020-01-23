@@ -67,6 +67,6 @@ public class FizzBuzzTest {
     @Test
     public void should_ignore_rule_of_contains_3_and_multiple_of_3_when_number_contains_5(){
         assertEquals(FizzBuzz.fizzBuzz(35), "BuzzWhizz");
-        assertEquals(FizzBuzz.fizzBuzz(15), "Buzz");
+        assertEquals(FizzBuzz.fizzBuzz(15), "FizzBuzz");
     }
 }
